@@ -1,0 +1,57 @@
+<ion-view view-title="Calculator">
+    <ion-content class="padding"><br><br><br><br><br><br>
+
+<div class="item item-input controls">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input id="pac-input" type="text" placeholder="Search Location" data-tap-disabled="true" ng-model="search">
+            </div>
+            <div id="map" data-tap-disabled="true"></div>
+            
+            
+            <br><br><br><br><br>
+
+
+
+        <h1> {{calculator.startOfScreen}}</h1>
+
+        <div class="row">
+            <button name="btn1" class="col" ng-click="numberClicked(1)">1</button>
+            <button name="btn2" class="col" ng-click="numberClicked(2)">2</button>
+            <button name="btn3" class="col" ng-click="numberClicked(3)">3</button>
+            <button name="btn0" class="col" ng-click="resetClicked()">C</button>
+
+        </div>
+
+        <div class="row">
+            <button name="btn4" class="col" ng-click="numberClicked(4)">4</button>
+            <button name="btn5" class="col" ng-click="numberClicked(5)">5</button>
+            <button name="btn6" class="col" ng-click="numberClicked(6)">6</button>
+            <button name="btn-" class="col" ng-click="operandClicked('-')">-</button>
+        </div>
+
+        <div class="row">
+            <button name="btn7" class="col" ng-click="numberClicked(7)">7</button>
+            <button name="btn8" class="col" ng-click="numberClicked(8)">8</button>
+            <button name="btn9" class="col" ng-click="numberClicked(9)">9</button>
+            <button name="btn+" class="col" ng-click="operandClicked('+')">+</button>
+        </div>
+
+        <div class="row">
+            <!--<button name="btn." class="col" value="." >.</button>-->
+            <button name="btn=" class="col" ng-click="equalSign()">=</button>
+            <button name="btn0" class="col" ng-click="numberClicked(0)">0</button>
+            <button name="btn*" class="col" ng-click="operandClicked('*')">*</button>
+            <button name="btn*" class="col" ng-click="operandClicked('/')">/</button>
+        </div>
+
+
+        <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+        <img ng-show="imgURI === undefined" ng-src="http://placehold.it/300x300">
+        <button class="button" ng-click="takePicture()">Take Picture</button>
+        
+        
+        
+        
+        
+    </ion-content>
+</ion-view>
